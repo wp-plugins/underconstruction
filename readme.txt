@@ -1,7 +1,7 @@
 === underConstruction ===
 Contributors: Jeremy Massel
 Donate link: http://truthmedia.com/engage/giving
-Tags: construction, under construction, private, preview
+Tags: construction, under construction, private, preview, security
 Requires at least: 2.7
 Tested up to: 2.8
 Stable tag: 1.01
