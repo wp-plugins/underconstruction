@@ -1,10 +1,10 @@
 === underConstruction ===
 Contributors: Jeremy Massel
 Donate link: http://truthmedia.com/engage/giving
-Tags: construction, under construction, private, preview
+Tags: construction, under construction, private, preview, security
 Requires at least: 2.7
 Tested up to: 2.8
-Stable tag: 1.0
+Stable tag: 1.01
 
 Makes it so your site can only be accessed by users who log in. Useful for developing a site on a live server, without the world being able to see it
 
@@ -36,9 +36,11 @@ You enter the contents of the entire HTML file. You can include inline styles, o
 
 == Changelog ==
 
+= 1.01 =
+* Fixed a bug where deactivation would trigger an error
 = 1.0 =
 * First version
 
 == Screenshots == 
-1. The default page that is displayed
+1. The default page that is displayed (this can be overridden)
 2. The editing screen
