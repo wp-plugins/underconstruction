@@ -29,7 +29,8 @@ e.g.
 
 You enter the contents of the entire HTML file. You can include inline styles, or links to external style sheets and external images.
 
-
+= I have a question you didn't answer! =
+Post a message on the [underConstruction page](http://masseltech.com/plugins/underConstruction/ "underConstruction page") and leave a message in the comments if you have a question that needs answering!
 
 == Screenshots ==
 
