@@ -87,7 +87,7 @@ function ucGetHTML()
 	return stripslashes(html_entity_decode(get_option('underConstructionHTML')));
 }
 
-function ucRemove(){
+function uc_remove(){
 	delete_option('underConstructionHTML');
 }
 ?>
