@@ -25,11 +25,6 @@ Creates a 'Coming Soon' page that will show for all users who are not logged in.
 
 You enter the contents of the entire HTML file. You can include inline styles, or links to external style sheets and external images.
 
-
-
-== Screenshots ==
-
-
 == Changelog ==
 
 = 1.02 =
