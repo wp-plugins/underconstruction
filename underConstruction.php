@@ -3,7 +3,7 @@
  Plugin Name: Under Construction
  Plugin URI: http://www.masseltech.com/
  Description: Makes it so your site can only be accessed by users who log in. Useful for developing a site on a live server, without the world being able to see it
- Version: 1.01
+ Version: 1.02
  Author: Jeremy Massel
  Author URI: http://www.masseltech.com/
  */
@@ -56,10 +56,12 @@ function uc_adminMenu()
 
 function uc_changeMessage()
 {
-
 	if(isset($_POST['ucHTML'])){
 		if(trim($_POST['ucHTML'])){
 			update_option('underConstructionHTML', attribute_escape($_POST['ucHTML']));
+		}
+		else{
+			uc_remove();
 		}
 	}
 	

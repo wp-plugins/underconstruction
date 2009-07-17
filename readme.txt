@@ -2,9 +2,9 @@
 Contributors: Jeremy Massel
 Donate link: http://truthmedia.com/engage/giving
 Tags: construction, under construction, private, preview, security
-Requires at least: 2.7
-Tested up to: 2.8
-Stable tag: 1.01
+Requires at least: 2.0
+Tested up to: 2.8.1
+Stable tag: 1.02
 
 Makes it so your site can only be accessed by users who log in. Useful for developing a site on a live server, without the world being able to see it
 
