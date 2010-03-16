@@ -232,20 +232,7 @@ function underConstructionPluginLinks($links, $file)
         $manage_link = '<a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage()).'">'.__('Settings').'</a>';
         array_unshift($links, $manage_link);
         
-        if ($underConstructionPlugin->pluginIsActive())
-        {
-            $manage_link .= '<a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage().'&turnOffUnderConstructionMode').'">'.__('Turn off Under Construction Mode').'</a>';
-           
-		    array_unshift($links, $manage_link);
-        }
-        
-        if (!$underConstructionPlugin->pluginIsActive())
-        {
-            $managePageLink = 'options-general.php?page=underConstructionMainOptions';
-            $manage_link .= '<a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage().'&turnOnUnderConstructionMode').'">'.__('Turn on Under Construction Mode').'</a>';
-            
-            array_unshift($links, $manage_link);
-        }
+     
 
         
     }
