@@ -1,6 +1,6 @@
 === underConstruction ===
 Contributors: Jeremy Massel
-Donate link: http://truthmedia.com/engage/giving
+Donate link: http://masseltech.com/donate/
 Tags: construction, under construction, private, preview, security, coming soon
 Requires at least: 2.7
 Tested up to: 2.9.2
