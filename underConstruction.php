@@ -234,8 +234,7 @@ function underConstructionPluginLinks($links, $file)
         
         if ($underConstructionPlugin->pluginIsActive())
         {
-            $manage_link = '<a href="#" class="hide-if-no-js"  onclick="ajaxTurnOnUnderConstructionMode();">'.__('Turn off Under Construction Mode').'</a>';
-            $manage_link .= '<noscript><a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage().'&turnOffUnderConstructionMode').'">'.__('Turn off Under Construction Mode').'</a></noscript>';
+            $manage_link .= '<a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage().'&turnOffUnderConstructionMode').'">'.__('Turn off Under Construction Mode').'</a>';
            
 		    array_unshift($links, $manage_link);
         }
@@ -243,8 +242,7 @@ function underConstructionPluginLinks($links, $file)
         if (!$underConstructionPlugin->pluginIsActive())
         {
             $managePageLink = 'options-general.php?page=underConstructionMainOptions';
-            $manage_link = '<a class="hide-if-no-js" href="#" onclick="ajaxTurnOnUnderConstructionMode();">'.__('Turn on Under Construction Mode').'</a>';
-            $manage_link .= '<noscript><a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage().'&turnOnUnderConstructionMode').'">'.__('Turn on Under Construction Mode').'</a></noscript>';
+            $manage_link .= '<a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage().'&turnOnUnderConstructionMode').'">'.__('Turn on Under Construction Mode').'</a>';
             
             array_unshift($links, $manage_link);
         }
