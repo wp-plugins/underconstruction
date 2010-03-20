@@ -154,17 +154,6 @@ class underConstruction
         delete_option('underConstructionHTTPStatus');
     }
     
-    function uc_delete()
-    {
-        //get rid of everything
-        delete_option('underConstructionHTML');
-        delete_option('underConstructionActivationStatus');
-        delete_option('underConstructionCustomText');
-        delete_option('underConstructionDisplayOption');
-        delete_option('underConstructionHTTPStatus');
-        delete_option('underConstructionArchive');
-    }
-    
     function pluginIsActive()
     {
     
@@ -267,11 +256,16 @@ add_action('template_redirect', array($underConstructionPlugin, 'uc_overrideWP')
 
 register_activation_hook(__FILE__, array($underConstructionPlugin, 'uc_activate'));
 register_deactivation_hook(__FILE__, array($underConstructionPlugin, 'uc_deactivate'));
-register_uninstall_hook(__FILE__, array($underConstructionPlugin, 'uc_delete'));
+register_uninstall_hook(__FILE__, 'underConstructionPlugin_delete');
 
 
 add_action('admin_init', array($underConstructionPlugin, 'underConstructionAdminInit'));
 add_action('admin_menu', array($underConstructionPlugin, 'uc_adminMenu'));
+
+function underConstructionPlugin_delete()
+{
+    delete_option('underConstructionArchive');
+}
 
 
 function underConstructionPluginLinks($links, $file)
