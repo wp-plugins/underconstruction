@@ -3,7 +3,7 @@
  Plugin Name: Under Construction
  Plugin URI: http://www.masseltech.com/
  Description: Makes it so your site can only be accessed by users who log in. Useful for developing a site on a live server, without the world being able to see it
- Version: 1.03
+ Version: 1.04
  Author: Jeremy Massel
  Author URI: http://www.masseltech.com/
  */
@@ -113,10 +113,56 @@ class underConstruction
     {
         return stripslashes(get_option('underConstructionHTML'));
     }
+
     
-    function uc_remove()
+    function uc_activate()
     {
+        if (get_option('underConstructionArchive'))
+        {
+            //get all the options back from the archive
+            $options = get_option('underConstructionArchive');
+            
+            //put them back where they belong
+            update_option('underConstructionHTML', $options['underConstructionHTML']);
+            update_option('underConstructionActivationStatus', $options['underConstructionActivationStatus']);
+            update_option('underConstructionCustomText', $options['underConstructionCustomText']);
+            update_option('underConstructionDisplayOption', $options['underConstructionDisplayOption']);
+            update_option('underConstructionHTTPStatus', $options['underConstructionHTTPStatus']);
+            
+            delete_option('underConstructionArchive');
+        }
+    }
+    
+    function uc_deactivate()
+    {
+        //get all the options. store them in an array
+        $options = array();
+        $options['underConstructionHTML'] = get_option('underConstructionHTML');
+        $options['underConstructionActivationStatus'] = get_option('underConstructionActivationStatus');
+        $options['underConstructionCustomText'] = get_option('underConstructionCustomText');
+        $options['underConstructionDisplayOption'] = get_option('underConstructionDisplayOption');
+        $options['underConstructionHTTPStatus'] = get_option('underConstructionHTTPStatus');
+        
+        //store the options all in one record, in case we ever reactivate the plugin
+        update_option('underConstructionArchive', $options);
+        
+        //delete the separate ones
         delete_option('underConstructionHTML');
+        delete_option('underConstructionActivationStatus');
+        delete_option('underConstructionCustomText');
+        delete_option('underConstructionDisplayOption');
+        delete_option('underConstructionHTTPStatus');
+    }
+    
+    function uc_delete()
+    {
+        //get rid of everything
+        delete_option('underConstructionHTML');
+        delete_option('underConstructionActivationStatus');
+        delete_option('underConstructionCustomText');
+        delete_option('underConstructionDisplayOption');
+        delete_option('underConstructionHTTPStatus');
+        delete_option('underConstructionArchive');
     }
     
     function pluginIsActive()
@@ -181,7 +227,7 @@ class underConstruction
         }
         else
         {
-            return 'empty';
+            return '';
         }
     }
     
@@ -194,7 +240,7 @@ class underConstruction
         }
         else
         {
-            return 'empty';
+            return '';
         }
     }
     
@@ -207,7 +253,7 @@ class underConstruction
         }
         else
         {
-            return 'empty';
+            return '';
         }
     }
 
@@ -217,7 +263,12 @@ class underConstruction
 $underConstructionPlugin = new underConstruction();
 
 add_action('template_redirect', array($underConstructionPlugin, 'uc_overrideWP'));
-register_deactivation_hook(__FILE__, array($underConstructionPlugin, 'uc_remove'));
+
+
+register_activation_hook(__FILE__, array($underConstructionPlugin, 'uc_activate'));
+register_deactivation_hook(__FILE__, array($underConstructionPlugin, 'uc_deactivate'));
+register_uninstall_hook(__FILE__, array($underConstructionPlugin, 'uc_delete'));
+
 
 add_action('admin_init', array($underConstructionPlugin, 'underConstructionAdminInit'));
 add_action('admin_menu', array($underConstructionPlugin, 'uc_adminMenu'));
@@ -231,8 +282,6 @@ function underConstructionPluginLinks($links, $file)
         //add settings page
         $manage_link = '<a href="'.admin_url('options-general.php?page='.$underConstructionPlugin->getMainOptionsPage()).'">'.__('Settings').'</a>';
         array_unshift($links, $manage_link);
-        
-     
 
         
     }
