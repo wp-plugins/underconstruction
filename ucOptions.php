@@ -93,6 +93,13 @@ if (isset($_POST['http_status']))
 
 
 ?>
+<noscript>
+    <div class='updated' id='javascriptWarn'>
+        <p>
+            JavaScript appears to be disabled in your browser. For this plugin to work correctly, please enable JavaScript or switch to a more modern browser
+        </p>
+    </div>
+</noscript>
 <div class="wrap">
     <div id="icon-options-general" class="icon32">
         <br/>
