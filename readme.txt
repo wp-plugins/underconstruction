@@ -3,8 +3,8 @@ Contributors: Jeremy Massel
 Donate link: http://truthmedia.com/engage/giving
 Tags: construction, under construction, private, preview, security, coming soon
 Requires at least: 2.7
-Tested up to: 2.9.2
-Stable tag: 1.03
+Tested up to: 3.0
+Stable tag: 1.04
 
 Creates a 'Coming Soon' page that will show for all users who are not logged in
 
@@ -38,6 +38,12 @@ Sorry, I get a lot of questions. But visit the homepage for this plugin and leav
 
 == Changelog ==
 
+= 1.04 =
+* Made UC a bit more of a 'good citizen' in terms of storing it's options. No options will be left behind when deleting the plugin now, and when deactivating, all options are compressed to one archive record. If reactivating the plugin, the options will be returned to how they were before deactivation.
+* Fixed a bug where the custom text fields might say "empty" by default
+* Ensured compatibility with 3.0-alpha
+* Added a warning message if javascript is disabled in the management screen.
+
 = 1.03 =
 * Added the ability to switch on and off while keeping the plugin active
 * Added the ability to send different HTTP headers (503 or 200)
@@ -55,12 +61,27 @@ Sorry, I get a lot of questions. But visit the homepage for this plugin and leav
 
 == Upgrade Notice ==
 
+= 1.04 =
+* Fixed a bug where options may not be deleted after deleting plugin. 
+* Improved options storage.
+* Fixed a bug where the custom text fields might say "empty" by default.
+* Ensured compatibility with 3.0-alpha.
+* Added a warning message if javascript is disabled in the management screen.
+
 = 1.03 =
 * Added the ability to switch on and off while keeping the plugin active
 * Added the ability to send different HTTP headers (503 or 200)
 * Added the ability to simply customize the default text, or display the default page
 * Tweaked the page slightly to be a little prettier
 
+= 1.02 =
+* Fixed a bug where clearing the text wouldn't cause it to revert to the default.
+
+= 1.01 =
+* Fixed a bug where deactivation would trigger an error
+
+= 1.0 =
+* First version
 == Screenshots == 
 1. The default page that is displayed (this can be overridden)
 2. The editing screen with the default page selected
