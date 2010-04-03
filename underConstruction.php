@@ -102,7 +102,7 @@ class underConstruction
                 
                 if ($this->displayStatusCodeIs(2)) //they want custom HTML!
                 {
-                    echo html_entity_decode($this->getCustomHTML());
+                    echo html_entity_decode($this->getCustomHTML(), ENT_QUOTES);
                     die();
                 }
             }
