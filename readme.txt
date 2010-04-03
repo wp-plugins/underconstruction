@@ -4,7 +4,7 @@ Donate link: http://truthmedia.com/engage/giving
 Tags: construction, under construction, private, preview, security, coming soon
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 1.04
+Stable tag: 1.05
 
 Creates a 'Coming Soon' page that will show for all users who are not logged in
 
@@ -38,6 +38,9 @@ Sorry, I get a lot of questions. But visit the homepage for this plugin and leav
 
 == Changelog ==
 
+= 1.05 =
+* Fixed an issue where single quotes were being escaped on custom HTML pages. They will now be unquoted when printed to the screen
+
 = 1.04 =
 * Made UC a bit more of a 'good citizen' in terms of storing it's options. No options will be left behind when deleting the plugin now, and when deactivating, all options are compressed to one archive record. If reactivating the plugin, the options will be returned to how they were before deactivation.
 * Fixed a bug where the custom text fields might say "empty" by default
@@ -60,6 +63,9 @@ Sorry, I get a lot of questions. But visit the homepage for this plugin and leav
 * First version
 
 == Upgrade Notice ==
+
+= 1.05 =
+* Fixed an issue where single quotes were being escaped on custom HTML pages. They will now be unquoted when printed to the screen
 
 = 1.04 =
 * Fixed a bug where options may not be deleted after deleting plugin. 
