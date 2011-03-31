@@ -1,9 +1,9 @@
 === underConstruction ===
 Contributors: Jeremy Massel
-Donate link: http://truthmedia.com/engage/giving
+Donate link: http://masseltech.com/donate/
 Tags: construction, under construction, private, preview, security, coming soon
 Requires at least: 2.7
-Tested up to: 3.0
+Tested up to: 3.1
 Stable tag: 1.05
 
 Creates a 'Coming Soon' page that will show for all users who are not logged in
@@ -13,6 +13,10 @@ Creates a 'Coming Soon' page that will show for all users who are not logged in
 Creates a 'Coming Soon' page that will show for all users who are not logged in. Useful for developing a site on a live server, without the world being able to see it
 
 
+*Shameless plug*
+Try my new App on the Mac App Store. It's great for testing Web Services, AJAX calls, or any time you just need a simple way to make a POST request!
+http://itunes.apple.com/us/app/rest-tester/id424466236?mt=12&ls=1
+
 == Installation ==
 
 1. Upload the folder to the `/wp-content/plugins/` directory
@@ -20,6 +24,12 @@ Creates a 'Coming Soon' page that will show for all users who are not logged in.
 3. If you want to change the look of the page that is displayed, click Settings->Under Construction and change the settings there.
 
 == Frequently Asked Questions ==
+
+= I'm finished with it, and disabled the plugin, but the "under construction" message is still showing up! =
+If you've disabled the plugin, it won't show anything anymore. To be extra super-sure, try deleting the plugin files. Usually, though, the issue is that you're seeing a cached version of the page. Try force-refreshing your browser, and then try clearing your cache on the server and force refreshing again.
+
+= I can't see the under construction page! =
+As long as you're logged in, you won't be able to see it. That's a feature! This way, while you're logged in you can work as usual. To preview what it looks like, either a) log out, or b) try viewing it in another browser
 
 = What kind of HTML can I put in? =
 You enter the contents of the entire HTML file. You can include inline styles, or links to external style sheets and external images.
@@ -42,7 +52,7 @@ Sorry, I get a lot of questions. But visit the homepage for this plugin and leav
 * Fixed an issue where single quotes were being escaped on custom HTML pages. They will now be unquoted when printed to the screen
 
 = 1.04 =
-* Made UC a bit more of a 'good citizen' in terms of storing it's options. No options will be left behind when deleting the plugin now, and when deactivating, all options are compressed to one archive record. If reactivating the plugin, the options will be returned to how they were before deactivation.
+* Made UC a bit more of a 'good citizen' in terms of storing its options. No options will be left behind when deleting the plugin now, and when deactivating, all options are compressed to one archive record. If reactivating the plugin, the options will be returned to how they were before deactivation.
 * Fixed a bug where the custom text fields might say "empty" by default
 * Ensured compatibility with 3.0-alpha
 * Added a warning message if javascript is disabled in the management screen.
