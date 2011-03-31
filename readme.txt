@@ -10,10 +10,9 @@ Creates a 'Coming Soon' page that will show for all users who are not logged in
 
 == Description ==
 
-Creates a 'Coming Soon' page that will show for all users who are not logged in. Useful for developing a site on a live server, without the world being able to see it
+Creates a 'Coming Soon' page that will show for all users who are not logged in. Useful for developing a site on a live server, without the world being able to see it.
 
-
-*Shameless plug*
+**Shameless plug**
 Try my new App on the Mac App Store. It's great for testing Web Services, AJAX calls, or any time you just need a simple way to make a POST request!
 http://itunes.apple.com/us/app/rest-tester/id424466236?mt=12&ls=1
 
