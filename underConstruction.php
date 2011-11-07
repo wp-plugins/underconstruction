@@ -3,7 +3,7 @@
  Plugin Name: Under Construction
  Plugin URI: http://www.masseltech.com/
  Description: Makes it so your site can only be accessed by users who log in. Useful for developing a site on a live server, without the world being able to see it
- Version: 1.06
+ Version: 1.07
  Author: Jeremy Massel
  Author URI: http://www.masseltech.com/
  */
@@ -81,7 +81,11 @@ class underConstruction
 			if (!is_user_logged_in())
 			{
 				$array = get_option('underConstructionIPWhitelist');
-
+				
+				if(!is_array($array)){
+					$array = array();
+				}
+				
 				if(!in_array($_SERVER['REMOTE_ADDR'], $array)){
 
 					//send a 503 if the setting requires it

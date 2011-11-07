@@ -4,7 +4,7 @@ Donate link: http://masseltech.com/donate/
 Tags: construction, under construction, private, preview, security, coming soon
 Requires at least: 2.7
 Tested up to: 3.2.1
-Stable tag: 1.06
+Stable tag: 1.07
 
 Creates a 'Coming Soon' page that will show for all users who are not logged in
 
@@ -42,6 +42,9 @@ I've had a few people ask me this. If you like it, please go to WordPress.org an
 Sorry, I get a lot of questions. But visit the homepage for this plugin and leave me a comment. They go right to my inbox, and well I might not be able to for a few days, I promise I'll get back to you.
 
 == Changelog ==
+
+= 1.07 =
+* Fixed a bug where a warning could get emitted causing errors to be printed to the screen
 
 = 1.06 =
 * Added the ability to allow certain IP addresses to see the site
