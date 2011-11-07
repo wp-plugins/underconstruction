@@ -3,18 +3,14 @@ Contributors: Jeremy Massel
 Donate link: http://masseltech.com/donate/
 Tags: construction, under construction, private, preview, security, coming soon
 Requires at least: 2.7
-Tested up to: 3.1
-Stable tag: 1.05
+Tested up to: 3.2.1
+Stable tag: 1.06
 
 Creates a 'Coming Soon' page that will show for all users who are not logged in
 
 == Description ==
 
-Creates a 'Coming Soon' page that will show for all users who are not logged in. Useful for developing a site on a live server, without the world being able to see it.
-
-**Shameless plug**
-Try my new App on the Mac App Store. It's great for testing Web Services, AJAX calls, or any time you just need a simple way to make a POST request!
-http://itunes.apple.com/us/app/rest-tester/id424466236?mt=12&ls=1
+Creates a 'Coming Soon' page that will show for all users who are not logged in. Useful for developing a site on a live server, without the world being able to see it
 
 == Installation ==
 
@@ -25,7 +21,7 @@ http://itunes.apple.com/us/app/rest-tester/id424466236?mt=12&ls=1
 == Frequently Asked Questions ==
 
 = I'm finished with it, and disabled the plugin, but the "under construction" message is still showing up! =
-If you've disabled the plugin, it won't show anything anymore. To be extra super-sure, try deleting the plugin files. Usually, though, the issue is that you're seeing a cached version of the page. Try force-refreshing your browser, and then try clearing your cache on the server and force refreshing again.
+If you've disabled the plugin, it won't show anything anymore. To be extra super-sure, try deleting the plugin files. Usually, though, the issue is that you're seeing a cached version of the page. Try force-refreshing your browser, and then try clearing your cache on the server and force refreshing again. If you have a caching plugin like W3 Total Cache, make sure you clear that too!
 
 = I can't see the under construction page! =
 As long as you're logged in, you won't be able to see it. That's a feature! This way, while you're logged in you can work as usual. To preview what it looks like, either a) log out, or b) try viewing it in another browser
@@ -46,6 +42,11 @@ I've had a few people ask me this. If you like it, please go to WordPress.org an
 Sorry, I get a lot of questions. But visit the homepage for this plugin and leave me a comment. They go right to my inbox, and well I might not be able to for a few days, I promise I'll get back to you.
 
 == Changelog ==
+
+= 1.06 =
+* Added the ability to allow certain IP addresses to see the site
+* Added the ability to have a 301 redirect instead of having the "Coming Soon" page
+* Added the ability to restrict what level of user can log into the site (Thanks Gerry for the feature request!)
 
 = 1.05 =
 * Fixed an issue where single quotes were being escaped on custom HTML pages. They will now be unquoted when printed to the screen
@@ -97,6 +98,7 @@ Sorry, I get a lot of questions. But visit the homepage for this plugin and leav
 
 = 1.0 =
 * First version
+
 == Screenshots == 
 1. The default page that is displayed (this can be overridden)
 2. The editing screen with the default page selected
